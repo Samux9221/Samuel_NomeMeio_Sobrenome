@@ -1,0 +1,156 @@
+/* Zerando as configurações padrão do navegador para eu ter o controle do layout */
+* {
+    margin: 0; /* Tira o espaçamento de fora padrão dos elementos */
+    padding: 0; /* Tira o espaçamento de dentro padrão dos elementos */
+    box-sizing: border-box; /* Garante que a borda e o padding não aumentem o tamanho final da caixa */
+}
+
+/* Estilo geral do corpo da página inteira */
+body {
+    background-color: #0a0a0a; /* Coloquei um fundo quase preto pra dar aquele estilo dark mode */
+    color: #f5f5f7; /* Letra num branco meio acinzentado pra não doer o olho na leitura */
+    font-family: Arial, sans-serif; /* Fonte simples e limpa */
+    line-height: 1.5; /* Dá um espacinho extra entre as linhas de texto pra ler melhor */
+}
+
+/* nosso heaeder */
+header {
+    background-color: #1d1d1f; /* Fundo do menu um pouquinho mais claro que o resto do site pra destacar */
+    padding: 20px 0; /* Dá um respiro de 20px em cima e embaixo dentro do cabeçalho (entre o navegador e o fim do header) */
+    border-bottom: 1px solid #333; /* Coloquei uma linhazinha cinza escuro embaixo pra separar do conteúdo */
+}
+
+/* Onde ficam os links do menu */
+nav ul {
+    display: flex; /* Coloca os itens da lista um do lado do outro na horizontal */
+    justify-content: center; /* Joga os links bem pro meio da tela */
+    list-style: none; /* Tira aquelas bolinhas de lista nativo do HTML */
+}
+
+/* Cada item individual do menu */
+nav li {
+    margin: 0 15px; /* Coloca um espaço de 15px entre um link e outro pra não ficarem colados */
+}
+
+/* O texto clicável (link) do menu */
+nav a {
+    color: #f5f5f7; /* Mesma cor de texto do body */
+    text-decoration: none; /* Tira aquele sublinhado feio que vem por padrão nos links */
+    font-size: 16px; /* Tamanho da letra do menu */
+}
+
+/* Efeito quando passo o mouse em cima do link no menu */
+nav a:hover {
+    color: #2997ff; /* Muda pra azulzinho pra eu saber onde o mouse tá */
+}
+
+/* A caixa central onde fica o conteúdo de todas as páginas */
+main {
+    max-width: 800px; /* Travei a largura pra não ficar um texto gigante espalhado no monitor */
+    margin: 40px auto; /* 40px de espaço em cima/embaixo, e o 'auto' centraliza a caixa no meio da tela */
+    padding: 0 20px; /* Um espacinho interno pra não grudar nas bordas no celular */
+}
+
+/* Títulos grandes da página */
+h1 {
+    font-size: 32px; /* Deixa a letra bem grande */
+    margin-bottom: 20px; /* Empurra o que vier embaixo do título um pouco pra baixo */
+}
+
+/* Minha foto redondinha */
+.profile-pic {
+    width: 150px; /* Largura da foto */
+    height: 150px; /* Altura da foto */
+    border-radius: 50%; /* Esse 50% é o truque pra foto quadrada virar um círculo perfeito */
+    margin-bottom: 20px; /* Afasta a foto do meu nome embaixo dela */
+}
+
+/* Meus dados de idade, curso, etc */
+.personal-info p {
+    margin-bottom: 10px; /* Espacinho entre uma linha e outra */
+    font-size: 18px; /* Letra um pouquinho maior que o texto normal */
+}
+
+/* O estilo das listas de colégios e sites favoritos */
+.academic-list, .favorite-links {
+    margin-left: 30px; /* Joga a lista um pouco pra direita pra dar um recuo */
+    margin-top: 20px; /* Desgruda do título que vem antes dela */
+}
+
+/* Cada linha dentro das listas */
+.academic-list li, .favorite-links li {
+    margin-bottom: 15px; /* Espaço entre os itens pra não ficar um blocão embolado */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Links que estão soltos pelo conteúdo (diferente dos links do menu) */
+main a {
+    color: #2997ff; /* Deixa o link azulzinho pra destacar no fundo escuro */
+    text-decoration: none; /* Tira o sublinhado */
+}
+
+/* Quando passo o mouse nos links do conteúdo */
+main a:hover {
+    text-decoration: underline; /* Devolve o sublinhado só pra dar um efeitinho visual de clique */
+}
+
+/* As tabelas de horários e do curso */
+table {
+    width: 100%; /* Faz a tabela usar todo o espaço da tela que puder */
+    border-collapse: collapse; /* Tira os espaços duplos entre as células pra ficar uma grade certinha */
+    margin-top: 20px; /* Espaço em cima da tabela */
+    background-color: #151515; /* Um fundo quase preto, um pouco diferente do fundo da página */
+}
+
+/* As caixinhas de dentro da tabela (cabeçalho e células normais) */
+th, td {
+    padding: 15px; /* Espaço pro texto não grudar nas bordas da célula */
+    text-align: center; /* Centraliza o texto bem no meio do quadradinho */
+    border: 1px solid #333; /* Uma linha cinza contornando cada célula */
+}
+
+/* Só a linha de título da tabela (o cabeçalho) */
+th {
+    background-color: #1d1d1f; /* Fundo um pouco mais claro pra destacar que é título */
+    color: #2997ff; /* Título da coluna em azul */
+}
+
+/* A coluna que mostra a hora das aulas */
+.time-col {
+    font-weight: bold; /* Deixa o texto em negrito pra destacar as horas */
+}
+
+/* A linha do intervalo do recreio */
+.break-row {
+    background-color: #222; /* Fundo diferente pra marcar o intervalo */
+    font-style: italic; /* Deixa a letra deitadinha (itálico) */
+}
+
+/* Os textos grandões sobre o IF e a Engenharia */
+.content-text p {
+    margin-bottom: 15px; /* Espaço entre os parágrafos pro texto respirar */
+    text-align: justify; /* Deixa o texto retinho nas laterais, estilo página de livro ou trabalho acadêmico */
+}
+
+/* A legenda obrigatória em cima da tabela do curso */
+caption {
+    padding: 10px; /* Espaço ao redor do textinho */
+    font-weight: bold; /* Deixa em negrito */
+    color: #2997ff; /* Cor azul pra chamar atenção e o professor ver que eu coloquei */
+}
+
+/* As caixas de projetos, contato e hobbies */
+.contact-card, .card {
+    background-color: #151515; /* Fundo escuro igual da tabela */
+    border: 1px solid #333; /* Bordinha cinza sutil */
+    padding: 30px; /* Espaçamento bem largo dentro da caixa pra ficar elegante */
+    margin-top: 20px; /* Afasta a caixa do texto de cima */
+    text-align: center; /* Centraliza tudo que eu escrever lá dentro */
+    margin-bottom: 20px; /* Afasta da próxima caixa de baixo, já que empilhamos elas */
+}
+
+/* Os títulos dentro dos meus cards de projetos e hobbies */
+.card h3 {
+    color: #2997ff; /* Título do card em azulzinho */
+    margin-bottom: 10px; /* Espaço entre o título do card e o texto dele */
+}
